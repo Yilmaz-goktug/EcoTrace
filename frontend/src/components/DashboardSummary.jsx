@@ -25,7 +25,7 @@ export const DashboardSummary = ({ totalCo2 = 0, summaryByScope = {}, period = '
     <div className="w-full flex flex-col gap-6">
       
       {/* Top Banner / Welcome & Quick Action */}
-      <div className="glass-card p-6 md:p-8 relative overflow-hidden bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-900 text-white rounded-3xl shadow-xl">
+      <div className="p-6 md:p-8 relative overflow-hidden bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-900 text-white rounded-3xl shadow-xl">
         {/* Absolute Nature Decorations */}
         <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 w-64 h-64 rounded-full bg-emerald-500/10 blur-2xl pointer-events-none"></div>
         <div className="absolute left-1/3 bottom-0 translate-y-12 w-48 h-48 rounded-full bg-teal-400/10 blur-xl pointer-events-none"></div>

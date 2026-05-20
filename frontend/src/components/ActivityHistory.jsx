@@ -150,7 +150,7 @@ export const ActivityHistory = ({ userId }) => {
                 <tr className="bg-slate-50/70 border-b border-slate-100 text-[11px] font-extrabold text-slate-400 uppercase tracking-wider">
                   <th className="py-3.5 px-5">Kategori / Kaynak</th>
                   <th className="py-3.5 px-5">Tüketim Miktarı</th>
-                  <th className="py-3.5 px-5">Kapsam (Scope)</th>
+                  <th className="py-3.5 px-5">Emisyon Türü</th>
                   <th className="py-3.5 px-5 text-right">Karbon Salınımı</th>
                   <th className="py-3.5 px-5 text-right">Tarih</th>
                 </tr>
@@ -188,7 +188,9 @@ export const ActivityHistory = ({ userId }) => {
                       {/* Column 3: Scope Badge */}
                       <td className="py-4 px-5">
                         <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase bg-slate-100 text-slate-600 border border-slate-200">
-                          {item.scope ? item.scope.replace('_', ' ') : 'Scope 1'}
+                          {item.scope === 'scope_1' ? 'Doğrudan (Kapsam 1)' : 
+                           item.scope === 'scope_2' ? 'Enerji (Kapsam 2)' : 
+                           item.scope === 'scope_3' ? 'Dolaylı (Kapsam 3)' : 'Doğrudan (Kapsam 1)'}
                         </span>
                       </td>
 

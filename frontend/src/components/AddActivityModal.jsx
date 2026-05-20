@@ -49,8 +49,8 @@ export const AddActivityModal = ({ isOpen, onClose, userId, onSuccess }) => {
 
   const dynamicSources = {
     'Ulaşım': [
-      { id: 'Benzinli Araç', label: 'Benzinli Araç (Litre)', unit: 'Litre' },
-      { id: 'Dizel Araç', label: 'Dizel Araç (Litre)', unit: 'Litre' },
+      { id: 'Benzinli Araç', label: 'Benzinli Araç (km)', unit: 'km' },
+      { id: 'Dizel Araç', label: 'Dizel Araç (km)', unit: 'km' },
     ],
     'Enerji': [
       { id: 'Elektrik', label: 'Elektrik (kWh)', unit: 'kWh' },
@@ -222,7 +222,7 @@ export const AddActivityModal = ({ isOpen, onClose, userId, onSuccess }) => {
                 : 'text-slate-500 bg-transparent hover:text-slate-800'
             }`}
           >
-            Statik Hesaplama (services.py)
+            Statik Hesaplama
           </button>
           <button
             type="button"
@@ -233,7 +233,7 @@ export const AddActivityModal = ({ isOpen, onClose, userId, onSuccess }) => {
                 : 'text-slate-500 bg-transparent hover:text-slate-800'
             }`}
           >
-            Dinamik DB Faktörü (seed.py)
+            Veritabanı Faktörü
           </button>
         </div>
 
@@ -320,9 +320,11 @@ export const AddActivityModal = ({ isOpen, onClose, userId, onSuccess }) => {
           {/* Scope Indicator (Static Only) */}
           {calcMethod === 'static' && (
             <div className="flex items-center justify-between p-2.5 bg-slate-50 rounded-lg border border-slate-100">
-              <span className="text-xs text-slate-500 font-medium">Atanan Kapsam (Scope):</span>
-              <span className="text-xs font-bold text-emerald-700 uppercase bg-white px-2 py-0.5 rounded border border-slate-200">
-                {scope.replace('_', ' ')}
+              <span className="text-xs text-slate-500 font-medium">Emisyon Türü:</span>
+              <span className="text-xs font-bold text-emerald-700 bg-white px-2 py-0.5 rounded border border-slate-200">
+                {scope === 'scope_1' ? 'Doğrudan (Kapsam 1)' : 
+                 scope === 'scope_2' ? 'Enerji (Kapsam 2)' : 
+                 'Dolaylı (Kapsam 3)'}
               </span>
             </div>
           )}

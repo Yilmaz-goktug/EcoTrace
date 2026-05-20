@@ -21,14 +21,14 @@ def seed_data():
                 EmissionFactor(
                     activity_category='Ulaşım',
                     source='Benzinli Araç',
-                    factor_value=2.31,
-                    unit='kg CO2e/Litre',
+                    factor_value=0.19,
+                    unit='kg CO2e/km',
                 ),
                 EmissionFactor(
                     activity_category='Ulaşım',
                     source='Dizel Araç',
-                    factor_value=2.68,
-                    unit='kg CO2e/Litre',
+                    factor_value=0.17,
+                    unit='kg CO2e/km',
                 ),
             ]
             db.session.add_all(emission_factors)

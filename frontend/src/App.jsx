@@ -114,7 +114,7 @@ function App() {
   const handleSkipGuest = () => {
     setIsGuest(true);
     // Setup a pre-filled awesome demo guest profile
-    setUser({ id: 1, username: 'DoğaDostu_Öğrenci', email: 'okul@proje.edu.tr' });
+    setUser({ id: 1, username: 'Ahmet Yılmaz', email: 'ahmet@ornek.com' });
   };
 
   // Trigger re-fetch when new emission is added via modal
@@ -203,7 +203,7 @@ function App() {
       {/* Premium Minimal Footer */}
       <footer className="w-full py-6 text-center text-xs text-slate-400 border-t border-emerald-100/60 mt-12 bg-white/40">
         <p className="m-0">
-          🌱 <strong>EcoTrace</strong> — Sürdürülebilir Karbon Ayak İzi Yönetim Sistemi. Okul Projesi için özenle tasarlanmıştır.
+          🌱 <strong>EcoTrace</strong>
         </p>
       </footer>
 

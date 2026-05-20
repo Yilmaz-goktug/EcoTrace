@@ -3,7 +3,7 @@ import { LeafIcon, GlobeIcon, UserIcon, LogOutIcon } from './Icons.jsx';
 
 export const Navbar = ({ currentTab, setCurrentTab, user, onLogout }) => {
   const tabs = [
-    { id: 'dashboard', label: 'Dashboard' },
+    { id: 'dashboard', label: 'Ana Sayfa' },
     { id: 'history', label: 'Geçmiş Aktiviteler' },
     { id: 'leaderboard', label: 'Liderlik Tablosu' },
     { id: 'goals', label: 'Hedefler & Rozetler' },

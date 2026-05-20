@@ -27,11 +27,11 @@ export const Leaderboard = () => {
   // Premium fallback if database leaderboard has less than 3 users to guarantee stunning podyum design
   const finalLeaders = leaders.length >= 3 ? leaders : [
     ...leaders,
-    { user_id: 101, username: 'EkoLider_Zeynep', total_co2: 42.5 },
-    { user_id: 102, username: 'YesilKure_Ahmet', total_co2: 68.1 },
-    { user_id: 103, username: 'DogaSever_Can', total_co2: 95.0 },
-    { user_id: 104, username: 'GelecekElcisi', total_co2: 120.4 },
-    { user_id: 105, username: 'KarbonSifirlayici', total_co2: 145.8 },
+    { user_id: 101, username: 'Ayşe Yılmaz', total_co2: 42.5 },
+    { user_id: 102, username: 'Mehmet Kaya', total_co2: 68.1 },
+    { user_id: 103, username: 'Elif Demir', total_co2: 95.0 },
+    { user_id: 104, username: 'Ali Öztürk', total_co2: 120.4 },
+    { user_id: 105, username: 'Zeynep Çelik', total_co2: 145.8 },
   ].slice(0, Math.max(leaders.length, 5));
 
   // Ensure they are sorted ascending by total_co2 (lowest footprint wins!)
